@@ -56,7 +56,7 @@
 
     <header>
         <!-- top header -->
-        <div class="top-header d-flex-1">
+        <div class="top-header d-flex-1" id="main">
             <div class="logo d-flex-2">
                 <img src="logo.png" alt="">
 
@@ -127,7 +127,7 @@
             <div class="rows">
                 <div class="cols-4">
                     <div class="about-profile" data-aos="fade-out">
-                        <img src="profile.jpg" alt="">
+                        <img src="profile.jpg" alt="" id="astro">
                     </div>
                 </div>
                 <div class="cols-8">
@@ -212,37 +212,37 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <div class="service-img">
+                    <div class="service-img" id="a1">
                         <img src="blog_img_03.jpg" alt="">
-                    </div>
-                    <div class="serv-title">
-                        <h3>Our Services</h3>
+                        <div class="serv-title">
+                            <h3>Our Services</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="service-img">
+                    <div class="service-img" id="a4">
                         <img src="blog_img_04.jpg" alt="">
-                    </div>
-                    <div class="serv-title">
-                        <h3>Our Services</h3>
+                        <div class="serv-title">
+                            <h3>Our Services</h3>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <div class="service-img">
+                    <div class="service-img" id="a3">
                         <img src="blog_img_05.jpg" alt="">
-                    </div>
-                    <div class="serv-title">
-                        <h3>Our Services</h3>
+                        <div class="serv-title">
+                            <h3>Our Services</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
-                    <div class="service-img">
+                    <div class="service-img" id="a2">
                         <img src="blog_img_06.jpg" alt="">
-                    </div>
-                    <div class="serv-title">
-                        <h3>Our Services</h3>
+                        <div class="serv-title">
+                            <h3>Our Services</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -358,7 +358,7 @@
                 </div>
                 <div class="col-md-6 col-12">
                     <div class="include-img" data-aos="zoom-in-right">
-                        <img src="blog_img_09.jpg" alt="">
+                        <img src="blog_img_09.jpg" alt="" id="a5">
                     </div>
                 </div>
             </div>
@@ -705,7 +705,8 @@
 
 
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 
 
 
@@ -822,6 +823,58 @@
         AOS.init({
             duration: 400,
         });
+
+
+
+
+
+
+        gsap.to('#astro', {
+            scrollTrigger: {
+                scrub: 1,
+            },
+            x: 100,
+
+        });
+        gsap.to('#main', {
+            scrollTrigger: {
+                scrub: 1,
+            },
+            y: 200,
+
+        });
+        gsap.to('#a1', {
+            scrollTrigger: {
+                scrub: 1,
+            },
+            x: 70,
+
+        });
+        gsap.to('#a4', {
+            scrollTrigger: {
+                scrub: 1,
+            },
+            x: -70,
+
+        });
+        gsap.to('#a2', {
+            scrollTrigger: {
+                scrub: 1,
+            },
+            y: -100,
+
+        });
+        gsap.to('#a3', {
+            scrollTrigger: {
+                scrub: 1,
+            },
+            y: -80,
+
+        });
+
+
+
+
 
     </script>
 
