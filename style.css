@@ -103,6 +103,7 @@ nav{
 
 
 /* mainpage */
+.main{padding-top: 70px; width: 100%; margin: 0 auto;}
 
 .main-page{
     background: url(frontBG.jpg);
