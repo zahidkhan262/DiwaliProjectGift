@@ -79,7 +79,7 @@ nav{
 .navigation-ul li a::before{
     content: '';
     position: absolute;
-    width: 00%;
+    width: 0;
     height: 3px;
     left: 50%;
     top: 22px;
@@ -93,7 +93,7 @@ nav{
 
 .menu-bar i{
     display: flex; 
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     margin-right: 20px;
     transition: 0.4s;
@@ -103,13 +103,13 @@ nav{
 
 
 /* mainpage */
-.main{padding-top: 70px; width: 100%; margin: 0 auto;}
+.main{padding-top: 70px; width: 100%;}
 
 .main-page{
+    width: 100%;
+    height: 500px;
     background: url(frontBG.jpg);
     background-size: cover;
-    height: 500px;
-    width: 100%;
     transition: 0.3s;
 }
 .main-caption{
@@ -128,13 +128,11 @@ width: 80%;
 .btns:hover{opacity: 0.7;}
 
 /* back-sketch-bg */
-
+.back-bg{width: 100%; margin: 20px 0;}
 .back-sketch-bg{
     background: url(bg-sketch.png);
     width: 100%;
     background-size: cover;
-    height: auto;
-    margin: 20px 0;
 }
 
 /* about */
