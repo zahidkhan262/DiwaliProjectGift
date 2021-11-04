@@ -321,8 +321,10 @@ width: 80%;
 
 /* blogs */
 
-.blog-img{width: 100%; padding: 10px 0;position: relative;}
-.blog-img img{width: 100%;}
+.blog-img{width: 100%; padding: 10px 0;position: relative; }
+
+.blog-img img{width: 100%;  transition: 0.3s;}
+
 
 .dates::before{
     content: '';
