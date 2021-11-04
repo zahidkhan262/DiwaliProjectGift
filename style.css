@@ -14,7 +14,6 @@
     --border:2px solid rgb(218, 218, 218);
     --shadow:0 0 15px rgba(0,0,0,0.3);
 }
-a{text-decoration: none;}
 
 .container-1{width: 100%; padding: 0 12px;}
 .container-2{width: 100%; padding: 0 25px;}
@@ -41,6 +40,7 @@ h3{font-size: 17px!important;}
 
 /* header */
 header{width: 100%;}
+header a, li a{text-decoration: none;}
 
 /* top-heder */
 .top-header{
@@ -59,9 +59,11 @@ header{width: 100%;}
 
 nav{
     background: linear-gradient(90deg, var(--secondary), #3c4fff);
-    padding: 15px 0;
+    padding: 20px 0;
     width: 100%;
     transition: 0.3s;
+    position: fixed;
+    z-index: 11111;
 }
 .navigation-ul{
     width: 100%;
@@ -117,8 +119,8 @@ width: 80%;
     margin-bottom: 20px;
 }
 .caption h2{color: var(--secondary); font-weight: 700; word-spacing: 2px;}
-.caption p{color: var(--black);  word-spacing: 2px; line-height: 25px;}
-.btns{border: none; outline: 0; background: var(--secondary); color: var(--white); padding: 10px 50px; font-size: 18px;}
+.caption p{color: var(--white);  word-spacing: 2px; line-height: 25px;}
+.btns{border: none; outline: 0; background: var(--secondary); color: var(--white); padding: 10px 80px; font-size: 18px;}
 .btns:hover{opacity: 0.7;}
 
 /* back-sketch-bg */
@@ -155,6 +157,7 @@ width: 80%;
 
 
 }
+.about h2{font-size: 22px;}
 .about-profile img{
     border-radius: 50%;
     border: 5px solid var(--secondary);
@@ -208,16 +211,18 @@ width: 80%;
     background-position: center;
     width: 100%;
 }
+
+.service-heading{padding: 10px 0; background: var(--main-color); width: 100%;}
 .service-heading h2{padding: 10px 0; color: var(--white);}
 
 
 
-.include-img, .service-img{width: 100%; padding: 10px; transition: 0.3s; transform: scale(0.9);}
+.service-img{width: 100%; padding: 10px; transition: 0.3s; transform: scale(0.9);}
 
 
 .service-img:hover{transform: scale(1.0);}
 
-.include-img img, .service-img img{width: 100%;}
+.service-img img{width: 100%;}
 .service-img:hover img{width: 100%; border-left: 6px solid var(--secondary);}
 
 .serv-title{margin: 10px 0; color: var(--white); text-align: center;}
@@ -229,15 +234,36 @@ width: 80%;
     margin: 20px 0;
 }
 
+.include-img{max-width: 500px;}
+.include-img img{width: 100%; height: 400px;}
+
 .projects-heading h2, .includes-heading h2{color: var(--black);}
 
 .accordians{margin: 20px 0;}
 
 .accodian-ul{margin: 0;}
 
-.accodian-ul li{list-style: none; display: block;}
+.accodian-ul li{list-style: none; display: block; padding-top: 10px;}
 
-.show-list{margin-left: 20px; display: none; cursor: pointer;}
+.show-list{
+    margin-left: 20px;
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid var(--secondary);
+    position: relative;
+    transition: 0.2s;
+}
+.show-list::after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -2.5px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 10px solid var(--secondary);
+}
+
 .main-list{cursor: pointer;}
 
 .main-list i{margin-right: 10px; font-size: 16px; color: var(--secondary);}
@@ -247,6 +273,138 @@ width: 80%;
 
 .gallery-img{width: 100%; padding: 10px;}
 .gallery-img img{width: 100%;}
+
+
+
+/* service areas */
+.services-list{margin: 10px 0;}
+
+.services-ul{margin: 0;}
+
+.services-ul li{list-style: none; padding-top: 10px; position: relative;}
+
+.services-ul li a{color: var(--black);}
+
+
+.services-ul li::after{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -26px;
+    background: var(--gray);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+.services-ul li:nth-child(1)::after{background: var(--secondary);}
+
+
+.services-ul li::before{
+    content: '';
+    position: absolute;
+    background: var(--gray);
+    width: 2px;
+    height: 100%;
+    left: -20px;
+    top: 18px;
+}
+.services-ul li:nth-last-child(1)::before{
+    content: '';
+    position: absolute;
+    height: 0%;
+}
+
+
+/* blogs */
+
+.blog-img{width: 100%; padding: 10px 0;position: relative;}
+.blog-img img{width: 100%;}
+
+.dates::before{
+    content: '';
+    position: absolute;
+    background: var(--secondary);
+    width: 50px;
+    height: 50px;
+    top: 15%;
+}
+.dates::after{
+    content: '2d';
+    position: absolute;
+    top: 18%;
+    color: var(--white);
+    left: 15px;
+    letter-spacing: 2px;
+}
+
+.blog-title{
+    background: var(--white);
+    padding: 10px 20px;
+    color: var(--black);
+}
+
+
+/* testimonial */
+
+.testimonial{
+    margin: 20px 0;
+}
+.testi-parent{padding: 10px;}
+
+.testimonial-heading{
+    margin-bottom: 20px;
+}
+.testi-slider{width: 100%;}
+.testi-box{
+    background: linear-gradient(218deg, #fff 92%, #3c4fff 10%);
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.testi-profile{
+    margin-top: 20px ;
+}
+
+.rating{width: 50%;}
+.rating i{color: goldenrod;}
+
+.img-pro{width: 100%;}
+.img-pro .name{ margin-left: 10px;}
+.img-pro img{width: 60px; border-radius: 100%; border: 2px solid var(--secondary);}
+
+.logo-com{width: 100%;}
+.logo-com img{width: 140px;}
+
+
+.company-slider{border: 2px solid var(--secondary); padding: 20px; margin: 20px auto;}
+
+/* footer */
+
+footer{
+    width: 100%;
+    background: var(--black);
+}
+.footer-ul{margin: 20px 0;}
+.footer-ul li{display: block; list-style: none; padding-top: 10px;}
+
+.form-heading h2,.footer-ul li h2{font-size: 27px!important; margin-bottom: 20px;}
+
+.footer-ul li i{color: var(--secondary);}
+.footer-ul li a{color: var(--white);}
+
+.f-li i{margin-right: 10px;}
+form{margin: 20px 0;}
+
+.input-field{margin: 10px 0;}
+.input-field input{width: 100%; padding: 8px;}
+.form-btn{width: 100%; margin-bottom: 20px;}
+
+.social-link i{margin-right: 15px; font-size: 22px; color: var(--secondary);margin-bottom: 10px;}
+.social-link i:hover{color: var(--main-color);}
+.copy-msg{padding: 10px 0; width: 100%; background: var(--secondary);}
+.copy-msg p{text-align: center; color: var(--black);}
+
 
 /* responsive */
 
@@ -277,7 +435,7 @@ width: 80%;
     .navigation-ul.menu-bar{display: block;}
 
 
-    .menu-bar i{position: absolute; top: 57px; right: 0; display: block;}
+    .menu-bar i{position: absolute; top: 10px; right: 0; display: block;}
 
 
     /* main page */
@@ -293,6 +451,7 @@ width: 80%;
 
     .about-profile{ width: 280px; margin: 0 auto;}
     .about {text-align: center; margin-bottom: 20px;}
+    form{margin: 20px;}
 
 }
 
