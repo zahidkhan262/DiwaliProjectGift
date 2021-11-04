@@ -40,7 +40,7 @@ h2{font-size: 19px!important;}
 h3{font-size: 17px!important;}
 
 /* header */
-header{width: 100%;}
+header{width: 100%; position: fixed; z-index: 1111;}
 header a, li a{text-decoration: none;}
 
 /* top-heder */
@@ -49,6 +49,7 @@ header a, li a{text-decoration: none;}
     padding: 10px 0;
     width: 100%;
 }
+
 
 .logo img{width: 200px; height: 100%;}
 
@@ -61,7 +62,7 @@ header a, li a{text-decoration: none;}
 
 nav{
     background: linear-gradient(90deg, var(--secondary), #3c4fff);
-    padding: 20px 0;
+    padding: 10px 0;
     width: 100%;
     transition: 0.3s;
 }
@@ -69,6 +70,8 @@ nav{
     width: 100%;
     text-align: center;
     transition: 0.4s;
+    margin: 0;
+    padding: 0;
 }
 .navigation-ul li{display: inline-block; padding: 0 15px;}
 
@@ -423,6 +426,7 @@ form{margin: 20px 0;}
     .info i{padding: 0 10px;}
 
 
+    nav{padding: 20px; position: relative;}
     .navigation-ul{
         display: none;
         border-top: 1px solid var(--gray);
@@ -431,10 +435,10 @@ form{margin: 20px 0;}
         margin-top: 20px;
     }
     .navigation-ul li{display: block; padding-top: 20px; position: relative;}
-    .navigation-ul.menu-bar{display: block;}
+    .navigation-ul.menu-bar{display: block; transition: 0.3s;}
 
 
-    .menu-bar i{position: absolute; top: 57px; right: 0; display: block;}
+    .menu-bar i{position: absolute; top: 10px; right: 0; display: block; transition: 0.3s;}
 
 
     /* main page */

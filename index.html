@@ -724,8 +724,16 @@
             })
 
 
+            // scroll top
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= 90) {
+                    $('.top-header').slideUp(600);
+                }
+                else {
+                    $('.top-header').slideDown(400);
+                }
+            })
         })
-
 
 
 
